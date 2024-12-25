@@ -8,7 +8,7 @@ const Search: React.FC = () => {
     return (
         <div className="bg-[#3B81F6] p-8">
             <p className="text-white text-3xl text-center">Reflect Your Year With <span className="font-bold">Chess.com Wrapped</span></p>
-            <p className="text-white text-center">Made By <span className="font-semibold underline cursor-pointer"><a href="https://www.linkedin.com/in/anmol-tuteja-684b0327b/" target="_blank">Anmol Tuteja</a></span> (not affiliated with GitHub)</p>
+            <p className="text-white text-center">Made By <span className="font-semibold underline cursor-pointer"><a href="https://www.linkedin.com/in/anmol-tuteja-684b0327b/" target="_blank">Anmol Tuteja</a></span> (not affiliated with chess.com)</p>
 
             <div className='flex pt-8 justify-around flex-wrap gap-4' >
                 <div className="bg-gray-300 w-80 p-4 rounded-md flex flex-col gap-3 pb-8 h-32 ">
