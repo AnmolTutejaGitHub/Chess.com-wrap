@@ -7,7 +7,13 @@ interface ProfileProps {
 function Profile({ username }: ProfileProps) {
     return <div>
         <Navbar />
-        {username}
+
+        <div>
+            <div className="text-center p-4 text-[#374151]">
+                <div className="font-bold"> {username}'s </div>
+                <div className="text-2xl">2024 Chess.com Wrapped</div>
+            </div>
+        </div>
     </div>;
 }
 
