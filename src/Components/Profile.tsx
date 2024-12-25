@@ -121,7 +121,7 @@ function Profile() {
 
 
             <div className="p-4 flex justify-around w-full items-center flex-wrap">
-                <div className="w-[40%] mobile-w-80">
+                <div className="w-[40%] mobile-w-90">
                     <div className="h-[40%] bg-gray-100 p-4 mt-8">
                         <BarGraph
                             labels={['October', 'November', 'December']}
@@ -134,7 +134,7 @@ function Profile() {
                     </div>
                 </div>
 
-                <div className="w-[40%] mobile-w-80">
+                <div className="w-[40%] mobile-w-90">
                     <div className="h-[40%] bg-gray-100 p-4 mt-8">
                         <BarGraph
                             labels={['Wins', 'Losses', 'Draws']}
