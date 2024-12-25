@@ -106,7 +106,7 @@ function Profile() {
             </div>
 
             <div className="flex justify-center">
-                <div className="w-[60%] h-[40%] bg-gray-100 p-4 mt-8">
+                <div className="w-[60%] h-[40%] bg-gray-100 p-4 mt-8 mobile-w-90">
                     <BarGraph
                         labels={['Rapid', 'Blitz', 'Bullet', 'Fide']}
                         data={[
@@ -121,7 +121,7 @@ function Profile() {
 
 
             <div className="p-4 flex justify-around w-full items-center flex-wrap">
-                <div className="w-[40%]">
+                <div className="w-[40%] mobile-w-80">
                     <div className="h-[40%] bg-gray-100 p-4 mt-8">
                         <BarGraph
                             labels={['October', 'November', 'December']}
@@ -134,7 +134,7 @@ function Profile() {
                     </div>
                 </div>
 
-                <div className="w-[40%]">
+                <div className="w-[40%] mobile-w-80">
                     <div className="h-[40%] bg-gray-100 p-4 mt-8">
                         <BarGraph
                             labels={['Wins', 'Losses', 'Draws']}
@@ -150,7 +150,7 @@ function Profile() {
             </div>
 
             <div className="flex flex-wrap p-4">
-                <div className="w-1/3 p-2">
+                <div className="w-1/3 p-2 mobile-w-90">
                     <PieChart
                         labels={['win', 'loss', 'draw']}
                         data={[
@@ -161,7 +161,7 @@ function Profile() {
                         chartTitle="All Time Rapid Stats"
                     />
                 </div>
-                <div className="w-1/3 p-2">
+                <div className="w-1/3 p-2 mobile-w-90">
                     <PieChart
                         labels={['win', 'loss', 'draw']}
                         data={[
@@ -172,7 +172,7 @@ function Profile() {
                         chartTitle="All Time Blitz Stats"
                     />
                 </div>
-                <div className="w-1/3 p-2">
+                <div className="w-1/3 p-2 mobile-w-90">
                     <PieChart
                         labels={['win', 'loss', 'draw']}
                         data={[
