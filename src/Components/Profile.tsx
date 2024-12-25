@@ -39,8 +39,8 @@ function Profile() {
         const data: any = response.data;
         const stat: Stats = {
             Rapid: { rating: data.chess_rapid.last.rating, win: data.chess_rapid.record.win, loss: data.chess_rapid.record.loss, draw: data.chess_rapid.record.draw },
-            Blitz: { rating: data.chess_bullet.last.rating, win: data.chess_bullet.record.win, loss: data.chess_bullet.record.loss, draw: data.chess_bullet.record.draw },
-            Bullet: { rating: data.chess_blitz.last.rating, win: data.chess_blitz.record.win, loss: data.chess_blitz.record.loss, draw: data.chess_blitz.record.draw },
+            Bullet: { rating: data.chess_bullet.last.rating, win: data.chess_bullet.record.win, loss: data.chess_bullet.record.loss, draw: data.chess_bullet.record.draw },
+            Blitz: { rating: data.chess_blitz.last.rating, win: data.chess_blitz.record.win, loss: data.chess_blitz.record.loss, draw: data.chess_blitz.record.draw },
             Fide: data.fide
         }
         console.log(stat);
