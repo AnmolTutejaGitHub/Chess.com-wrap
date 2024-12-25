@@ -2,6 +2,7 @@ import Arjun from '../assets/Arjun wins WR Masters_7BC81_1366x1567.jpeg';
 import Hikaru from '../assets/HikaruN.jpeg';
 import Fabiano from '../assets/fabiano.jpeg';
 import Magnus from '../assets/Magnus.png';
+import { useNavigate } from 'react-router-dom';
 
 
 interface ExampleData {
@@ -11,7 +12,7 @@ interface ExampleData {
 }
 
 const SampleData: React.FC = () => {
-
+    const navigate = useNavigate();
     const sampleData: ExampleData[] = [
         { user: "Magnus Carlsen", username: "MagnusCarlsen", profilePic: Magnus },
         { user: "Hikaru Nakamura", username: "Hikaru", profilePic: Hikaru },
@@ -20,7 +21,8 @@ const SampleData: React.FC = () => {
     ]
 
     const renderData = sampleData.map((data) => {
-        return <div className="bg-gray-100 p-6 rounded-sm hover:bg-gray-200 flex gap-2 justify-center cursor-pointer">
+        return <div className="bg-gray-100 p-6 rounded-sm hover:bg-gray-200 flex gap-2 justify-center cursor-pointer"
+            onClick={() => navigate(`/profile`, { state: { username: data.username } })}>
             <div>
                 <img
                     src={data.profilePic}
@@ -32,7 +34,7 @@ const SampleData: React.FC = () => {
                 <div className="text-[#374151] font-bold">{data.user}</div>
                 <div className='text-sm'>@{data.username}</div>
             </div>
-        </div>
+        </div >
     })
 
     return (<div className="pt-16 pb-16 p-2">
