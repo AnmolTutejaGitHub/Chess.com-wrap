@@ -20,9 +20,10 @@ const SampleData: React.FC = () => {
         { user: "Fabiano Caruana", username: "FabianoCaruana", profilePic: Fabiano }
     ]
 
-    const renderData = sampleData.map((data) => {
+    const renderData = sampleData.map((data, index) => {
         return <div className="bg-gray-100 p-6 rounded-sm hover:bg-gray-200 flex gap-2 justify-center cursor-pointer"
-            onClick={() => navigate(`/profile`, { state: { username: data.username } })}>
+            onClick={() => navigate(`/profile`, { state: { username: data.username } })} key={index}
+        >
             <div>
                 <img
                     src={data.profilePic}
@@ -39,7 +40,7 @@ const SampleData: React.FC = () => {
 
     return (<div className="pt-16 pb-16 p-2">
         <div className="text-center text-3xl text-gray-700">See Some Examples</div>
-        <div className="flex justify-around p-4 pt-8">{renderData}</div>
+        <div className="flex justify-around p-4 pt-8 flex-wrap gap-4">{renderData}</div>
     </div>)
 }
 export default SampleData;

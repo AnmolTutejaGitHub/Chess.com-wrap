@@ -30,7 +30,7 @@ interface MonthGames {
 function Profile() {
     const location = useLocation();
     const { username } = location.state || {};
-    const [year, setYear] = useState<string>('2024');
+    const year: string = '2024';
     const [stats, setStats] = useState<Stats | null>(null);
     const [YearStats, setYearSats] = useState<MonthGames[]>([]);
 
@@ -59,7 +59,6 @@ function Profile() {
 
         for (const match of data.games) {
             const color: string = match.white.username === username ? "white" : "black";
-            console.log(color);
             accuracyTotal += match?.accuracies?.[color] ?? 0;
             if (match?.accuracies?.[color]) MatchedReviewed++;
             if (match[color]?.result == "win") wins++;
@@ -140,9 +139,9 @@ function Profile() {
                         <BarGraph
                             labels={['Wins', 'Losses', 'Draws']}
                             data={[
-                                YearStats[0]?.win + YearStats[1]?.win + YearStats[2]?.win ?? 0,
-                                YearStats[0]?.loss + YearStats[1]?.loss + YearStats[2]?.loss ?? 0,
-                                YearStats[0]?.draw + YearStats[1]?.draw + YearStats[2]?.draw ?? 0,
+                                YearStats[0]?.win + YearStats[1]?.win + YearStats[2]?.win,
+                                YearStats[0]?.loss + YearStats[1]?.loss + YearStats[2]?.loss,
+                                YearStats[0]?.draw + YearStats[1]?.draw + YearStats[2]?.draw,
                             ]}
                             datasetLabel={`Out of ${YearStats[0]?.gamesPlayed + YearStats[1]?.gamesPlayed + YearStats[2]?.gamesPlayed} games played in last 3 months`} />
                     </div>
