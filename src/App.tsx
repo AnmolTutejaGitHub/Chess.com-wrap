@@ -1,15 +1,17 @@
-import { useState } from 'react';
-import Navbar from './Components/Navbar';
-import Search from './Components/Search';
-import Footer from './Components/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './Components/Home';
+import Profile from './Components/Profile';
 
 const App: React.FC = () => {
 
   return (
     <div>
-      <Navbar />
-      <Search />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/profile" element={<Profile username="MagnusCarlsen" />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
